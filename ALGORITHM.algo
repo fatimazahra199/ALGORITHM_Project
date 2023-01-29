@@ -1,0 +1,26 @@
+ALGORITHM str_count
+VAR
+    str: STRING
+    str_length : INTEGER
+    word_count: INTEGER
+    vowel_count : INTEGER
+    charS : CHAR
+    iteration: INTEGER
+BEGIN
+    Read (str)
+    iteration := 0
+    str_length := 0
+    word_count := 0
+    vowel_count := 0
+    charS := str[iteration]
+    WHILE(charS NOT IS '.') DO
+        str_length = str_length + 1
+        IF (charS = ' ') THEN
+            word_count = word_count+1
+        ELSE IF (charS='a' OR charS='o' OR charS='u' OR charS='i' OR charS='e') THEN
+            vowel_count = vowel_count+1
+        END IF
+        iteration = iteration+1
+        charS = str[iteration]
+    END WHILE
+END
